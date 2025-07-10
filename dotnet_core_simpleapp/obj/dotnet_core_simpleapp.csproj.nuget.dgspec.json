@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DotnetMigration\\dotnet_core_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj": {}
+    "E:\\DotnetMigration\\dotnetcore_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj": {}
   },
   "projects": {
-    "E:\\DotnetMigration\\dotnet_core_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj": {
+    "E:\\DotnetMigration\\dotnetcore_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DotnetMigration\\dotnet_core_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj",
+        "projectUniqueName": "E:\\DotnetMigration\\dotnetcore_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj",
         "projectName": "dotnet_core_simpleapp",
-        "projectPath": "E:\\DotnetMigration\\dotnet_core_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj",
+        "projectPath": "E:\\DotnetMigration\\dotnetcore_simpleapp\\dotnet_core_simpleapp\\dotnet_core_simpleapp.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "E:\\DotnetMigration\\dotnet_core_simpleapp\\dotnet_core_simpleapp\\obj\\",
+        "outputPath": "E:\\DotnetMigration\\dotnetcore_simpleapp\\dotnet_core_simpleapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

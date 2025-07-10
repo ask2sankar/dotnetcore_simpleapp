@@ -1,0 +1,80 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build results
+bin/
+obj/
+out/
+artifacts/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider project files
+.idea/
+
+# VS Code settings
+.vscode/
+.vs/
+
+# Logs
+*.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Azure settings
+PublishProfiles/
+
+# User secrets
+**/appsettings.*.json
+secrets.json
+
+# DotCover
+*.dotCover
+
+# Docker files
+docker-compose.override.yml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# NUnit
+TestResult.xml
+TestResult-*.xml
+
+# Web results
+*.publish.xml
+*.pfx
+
+# Others
+*.dbmdl
+*.bak
+*.sql
+*.sqlite
+*.swp
+
+# npm / Yarn
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs and database
+*.db
+*.mdb
+*.ldf
+*.mdf
+
+# DotNet Core tooling
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# JetBrains Rider
+.idea/
+*.sln.iml

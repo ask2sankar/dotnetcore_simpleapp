@@ -1,24 +1,26 @@
-# Use the official .NET SDK image to build the app
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-# Copy csproj and restore dependencies
-COPY *.sln ./
-COPY dotnet_core_simpleapp/*.csproj ./dotnet_core_simpleapp/
+# Copy csproj and restore as distinct layers
+COPY ["*.csproj", "./"]
 RUN dotnet restore
 
-# Copy the remaining source code and build the application
-COPY dotnet_core_simpleapp/. ./dotnet_core_simpleapp/
-WORKDIR /app/dotnet_core_simpleapp
-RUN dotnet publish -c Release -o /app/publish
+# Copy everything else and build
+COPY . .
+RUN dotnet publish -c Release -o /app/publish --no-restore
 
-# Use the ASP.NET Core runtime image for the final stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Expose the port used by the ASP.NET Core app
-EXPOSE 80
+# OpenShift: run as non-root user
+USER 10001
 
-# Start the application
+# Expose port (change if your app uses a different port)
+EXPOSE 8080
+
+ENV ASPNETCORE_URLS=http:/MyfirstApp/+:8080
+
 ENTRYPOINT ["dotnet", "dotnet_core_simpleapp.dll"]
